@@ -1,87 +1,287 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Global Coastal Adventures</title>
-    <meta
-      name="description"
-      content="Global Coastal Adventures publishes mobile games, including Final Fool."
-    >
+    <title>Global Coastal Adventures LLC</title>
+    <meta name="description" content="Global Coastal Adventures LLC is a professional digital entertainment and media company. We publish mobile games including Final Fool for iOS and produce global travel content.">
     <style>
-      :root {
-        color-scheme: light;
-        --ink: #17211d;
-        --muted: #5d6c66;
-        --felt: #17644b;
-        --gold: #d6a633;
-        --paper: #f8f5ee;
-      }
+        :root {
+            color-scheme: light;
+            --primary-blue: #0A2540;
+            --accent-blue: #639FAB;
+            --brand-gold: #D4AF37;
+            --light-gold: #FDF9EC;
+            --text-dark: #1C2434;
+            --text-muted: #627289;
+            --surface-white: #FFFFFF;
+            --bg-canvas: #F4F7FA;
+            --border-color: #E2E8F0;
+        }
 
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        background: linear-gradient(180deg, #0d392d, var(--felt));
-        color: var(--ink);
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
+        * {
+            box-sizing: border-box;
+        }
 
-      main {
-        width: min(720px, calc(100% - 32px));
-        border: 1px solid rgba(255, 255, 255, 0.28);
-        border-radius: 8px;
-        background: var(--paper);
-        padding: 28px;
-        box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
-      }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-blue), #1A365D);
+            color: var(--text-dark);
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding: 40px 20px;
+        }
 
-      h1 {
-        margin: 0 0 10px;
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(36px, 8vw, 64px);
-        line-height: 0.95;
-      }
+        main {
+            width: 100%;
+            max-width: 680px;
+            border-radius: 16px;
+            background: var(--surface-white);
+            padding: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+        }
 
-      p {
-        margin: 0 0 18px;
-        color: var(--muted);
-        font-size: 18px;
-        line-height: 1.5;
-      }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 36px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 32px;
+        }
 
-      a {
-        color: var(--felt);
-        font-weight: 800;
-      }
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--light-gold);
+            border: 2px solid var(--brand-gold);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
 
-      .badge {
-        display: inline-block;
-        margin-bottom: 16px;
-        color: #7b5c10;
-        font-size: 13px;
-        font-weight: 900;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
+        /* You can swap the CSS circle below for an <img> tag once you host your logo file:
+           Example: <img src="logo.png" alt="Global Coastal Adventures LLC Logo"> */
+        .logo-placeholder span {
+            font-family: Georgia, serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--brand-gold);
+        }
 
-      .game {
-        margin-top: 22px;
-        border-left: 4px solid var(--gold);
-        padding-left: 14px;
-      }
+        .brand-badge {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: var(--accent-blue);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(28px, 5vw, 38px);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--primary-blue);
+        }
+
+        .tagline {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 520px;
+        }
+
+        h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin: 0 0 16px;
+            font-weight: 700;
+            border-left: 3px solid var(--primary-blue);
+            padding-left: 10px;
+        }
+
+        .section-block {
+            margin-bottom: 36px;
+        }
+
+        .game-card {
+            background: var(--light-gold);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-left: 4px solid var(--brand-gold);
+            border-radius: 4px 12px 12px 4px;
+            padding: 24px;
+        }
+
+        .game-title {
+            font-size: 18px;
+            color: var(--primary-blue);
+            margin: 0 0 8px;
+        }
+
+        .game-description {
+            margin: 0 0 16px;
+            color: var(--text-dark);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .app-store-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-blue);
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+            gap: 4px;
+        }
+
+        .app-store-link:hover {
+            color: var(--accent-blue);
+            text-decoration: underline;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-canvas);
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .social-button:hover {
+            background: var(--surface-white);
+            border-color: var(--accent-blue);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 32px;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .contact-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            font-weight: 700;
+        }
+
+        .contact-link {
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .contact-link:hover {
+            color: var(--accent-blue);
+            text-decoration: underline;
+        }
+
+        .support-notice {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .site-footer {
+            margin-top: 32px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+        }
     </style>
-  </head>
-  <body>
-    <main>
-      <span class="badge">Mobile Games</span>
-      <h1>Global Coastal Adventures</h1>
-      <p>Global Coastal Adventures publishes mobile games for iPhone and iPad.</p>
-      <section class="game" aria-label="Final Fool">
-        <p><strong>Final Fool</strong> is an idiot card game available on the App Store.</p>
-      </section>
-      <p>Contact: <a href="mailto:support@globalcoastaladventures.com">support@globalcoastaladventures.com</a></p>
-    </main>
-  </body>
+</head>
+<body>
+
+<main>
+    <header>
+        <!-- Logo circle element populated with brand initials as placeholder -->
+        <div class="logo-placeholder">
+            <span>GCA</span>
+        </div>
+        <span class="brand-badge">Mobile Games &amp; Media Entertainment</span>
+        <h1>Global Coastal Adventures LLC</h1>
+        <p class="tagline">Providing premium travel content and interactive entertainment across mobile platforms.</p>
+    </header>
+
+    <!-- Essential Section for Apple Reviewers to check published inventory -->
+    <section class="section-block" aria-labelledby="ios-publishing">
+        <h2 id="ios-publishing">iOS Applications</h2>
+        <div class="game-card">
+            <h3 class="game-title"><strong>Final Fool</strong></h3>
+            <p class="game-description">An engaging, strategic digital card game built natively for iPhone and iPad devices.</p>
+            <a href="https://apple.com" class="app-store-link" target="_blank" rel="noopener">View on the App Store &rarr;</a>
+        </div>
+    </section>
+
+    <!-- Direct verification channels showing brand legitimacy -->
+    <section class="section-block" aria-labelledby="media-channels">
+        <h2 id="media-channels">Official Media Channels</h2>
+        <div class="social-grid">
+            <a href="https://instagram.com" class="social-button" target="_blank" rel="noopener">Instagram (@gcallc1)</a>
+            <a href="https://tiktok.com" class="social-button" target="_blank" rel="noopener">TikTok (@gcallc1)</a>
+        </div>
+    </section>
+
+    <!-- Mandated Contact Matrix & App Store Support Framework -->
+    <footer class="contact-grid">
+        <div class="contact-item">
+            <span class="contact-label">Corporate Inquiries</span>
+            <a class="contact-link" href="mailto:pkealy@globalcoastaladventures.com">pkealy@globalcoastaladventures.com</a>
+        </div>
+        <div class="contact-item">
+            <span class="contact-label">App Support &amp; Legal</span>
+            <a class="contact-link" href="mailto:support@globalcoastaladventures.com">support@globalcoastaladventures.com</a>
+            <p class="support-notice">For technical issues, bug reporting, or account inquiries, contact our customer network.</p>
+        </div>
+    </footer>
+</main>
+
+<footer class="site-footer">
+    &copy; 2026 Global Coastal Adventures LLC. All rights reserved.
+</footer>
+
+</body>
 </html>
+
